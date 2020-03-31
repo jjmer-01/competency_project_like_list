@@ -1,0 +1,1 @@
+SELECT * FROM items LIMIT 20;
