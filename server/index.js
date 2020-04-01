@@ -22,10 +22,11 @@ massive({
 
 //ENDPOINTS
 
-app.get('/api/items/:user_id', ctrl.getItems)
-app.get(`/api/item/:item_id`, ctrl.getItem) //needs the query on it
-app.get('/api/items/:user_id', ctrl.getUserItems)
-app.get(`/api/itemFilter/:user_id/:search_text`, ctrl.searchItems)
-app.get('/api/users', ctrl.getUsers)
-app.post('/api/item', ctrl.addItem)
-app.post('/api/user_item/:user_id', ctrl.addUserItem)
+app.get('/api/users', ctrl.getUsers) //success
+app.get('/api/items/:user_id', ctrl.getItems) //success
+app.get('/api/likes/:user_id', ctrl.getUserItems) //success
+app.get(`/api/item`, ctrl.getItem) //query //success
+app.get(`/api/itemFilter/:user_id`, ctrl.searchItems) //query (db query issue)
+
+app.post('/api/item', ctrl.addItem) //success
+app.post('/api/likes/:user_id', ctrl.addUserItem) //success
